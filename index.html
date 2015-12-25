@@ -14,22 +14,33 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css" id="theme">
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css"> -->
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css" id="theme"> -->
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+    <!-- <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css"> -->
 
-    <link rel="stylesheet" href="style/custom.css">
 
+    <link rel="stylesheet" href="build/css/lib.min.css">
+    <link rel="stylesheet" href="build/css/presentation.min.css">
+
+
+    <script src="build/js/head.min.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
+
+      link.rel  = 'stylesheet';
       link.type = 'text/css';
-      link.href = 'node_modules/reveal.js/css/print/' + window.location.search.match( /print-pdf/gi ) ? 'pdf.css' : 'paper.css';
+      link.href = 'node_modules/reveal.js/css/print/' +
+                  (window.location.search.match( /print-pdf/gi ) ? 'pdf.css' : 'paper.css');
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
+
+
+
+
 
     <!--[if lt IE 9]>
     <script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
@@ -60,29 +71,31 @@
         </section>
 
 
-    <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
-    <script src="node_modules/reveal.js/js/reveal.js"></script>
+    <!-- <script src="node_modules/reveal.js/lib/js/head.min.js"></script> -->
+    <!-- <script src="node_modules/reveal.js/js/reveal.js"></script> -->
+
+    <script src="build/js/lib.min.js"></script>
 
     <script>
 
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+        controls : true,
+        progress : true,
+        history  : true,
+        center   : true,
 
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition : 'slide', // none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
-        dependencies: [
-          { src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true }
+        dependencies : [
+          { src: 'build/js/classList.js', condition : function() { return !document.body.classList; } },
+          { src: 'build/js/marked.js',    condition : function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'build/js/markdown.js',  condition : function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'build/js/highlight.js', async : true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'build/js/zoom.js',      async : true },
+          { src: 'build/js/notes.js',     async : true }
         ]
       });
     </script>
