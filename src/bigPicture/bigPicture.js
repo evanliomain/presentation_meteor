@@ -195,10 +195,12 @@
   node.append('svg:image')
       .attr('height', imgHeight)
       .attr('width', imgHeight)
-      .attr('xlink:href', function(d) {
-        console.log(d);
-        return d.img;
+      .attr('attr',  function(d) {
+        return d.label;
       })
+      .attr('xlink:href', function(d) {
+        return d.img;
+      });
 
   node.call(force.drag);
 
