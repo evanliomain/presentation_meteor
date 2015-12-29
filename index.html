@@ -93,7 +93,178 @@
             <div class="big-picture"></div>
           </section>
         </section>
+
+        <section>
+          <section>
+            <h2><img src="img/meteor-logo-white.png" alt="meteor" class="no-style"></h2>
+            <p>Un autre framework de plus ?</p>
+          </section>
+          <section>
+            <h2>Qui est derrière le rideau ?</h2>
+            <ul>
+              <li>
+                Projet initial par <a href="https://twitter.com/n1mmy">Nick Martin</a>, <a href="https://twitter.com/debergalis">Matt DeBergalis</a> et <a href="https://twitter.com/immir">Geoff Schmidt</a>
+              </li>
+              <li><a href="https://www.linkedin.com/company/meteor-development-group">MDG</a> : Meteor Development Group (fondé en 2011)</li>
+              <li>La communauté</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Depuis combien de temps ?</h2>
+            <a href="https://github.com/meteor/meteor/graphs/contributors">
+              <img src="img/graph/Contributors_to_meteor-meteor.jpg" class="no-style">
+            </a>
+            <p>Premier commit github le 18/11/2011</p>
+            <p>v0.0.40 le 11/12/2011</p>
+            <p>v1.0 le 17/03/2015</p>
+            <p>v1.1 le 31/03/2015</p>
+            <p>v1.2 le 21/09/2015</p>
+            <p>v1.3 actuellement en beta</p>
+          </section>
+          <section>
+            <h2>Plateform JS</h2>
+            <ul>
+              <li class="fragment">
+                Base de donnée MongoDB
+                <img src="img/logo/mongodb.png" alt="MongoDB" class="no-style logo">
+              </li>
+              <li class="fragment">
+                Gestionnaire de websocket
+              </li>
+              <li class="fragment">
+                Moteur de templating (blaze)
+              </li>
+              <li class="fragment">
+                Package manager
+              </li>
+              <li class="fragment">
+                App builder
+              </li>
+              <li class="fragment">
+                Conteneur mobile cordova
+                <img src="img/logo/cordova.png" alt="cordova" class="no-style logo">
+              </li>
+              <li class="fragment">
+                Solution de hosting de demo
+              </li>
+              <li class="fragment">
+                Solution de hosting de production : Galaxy
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Sur quel environnement ?</h2>
+            <ul>
+              <li>Mac OSX</li>
+              <li>Linux</li>
+              <li>Windows (depuis 2015)</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Morceau de code</h2>
+          </section>
+          <section>
+            <h2>Par où commencer ?</h2>
+          </section>
+          <section>
+            <h3>Installation</h3>
+            <p>
+              Pour Mac & Linux
+              <pre><code class="sh" data-trim>curl https://install.meteor.com/ | sh</code></pre>
+            </p>
+            <p>
+              Pour Windows
+              <br>
+              <a href="https://install.meteor.com/windows">installer</a>
+            </p>
+          </section>
+
+          <section>
+            <h3>Création du projet</h3>
+            <pre><code class="sh" data-trim>meteor create my-project</code></pre>
+            <ul class="fragment">
+              <li>Fichier de demo : my-project.js, my-project.html, my-project.css</li>
+              <li>Répertoire : .meteor</li>
+              <li>Configure correctement les .gitignore</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Utilisation d'un document MongoDB</h3>
+            <p>Création</p>
+            <pre><code class="js" data-trim>MyList = new Mongo.Collection('myList');</code></pre>
+          </section>
+          <section>
+            <p>Récupération</p>
+            <pre><code class="js" data-trim>MyList.find({});</code></pre>
+
+            <p>Insertion</p>
+            <pre><code class="js" data-trim>
+MyList.insert({
+  text      : 'example',
+  createdAt : new Date() // current time
+});
+            </code></pre>
+
+            <p>Edition</p>
+            <pre><code class="js" data-trim>
+MyList.update(this._id, {
+  $set : { text : 'new example' }
+});
+            </code></pre>
+
+            <p>Suppression</p>
+            <pre><code class="js" data-trim>
+              MyList.remove(this._id);
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Utilisation d'un package</h3>
+            <p>authentification OAUTH de google</p>
+          </section>
+          <section>
+            <p>Ajout des packages</p>
+            <pre><code class="sh" data-trim>meteor add accounts-ui accounts-google</code></pre>
+          </section>
+          <section>
+            <p>Création de votre projet sur la <a href="https://console.developers.google.com/project">console google</a></p>
+
+          </section>
+          <section>
+            <p>Configuration</p>
+            <pre><code class="js" data-trim>
+ServiceConfiguration.configurations.upsert({
+  service : 'google'
+}, {
+  $set : {
+    clientId   : '{votre client id}',
+    loginStyle : 'popup',
+    secret     : '{votre secret}'
+  }
+});
+            </code></pre>
+          </section>
+          <section>
+            <p>Affichage</p>
+            <pre><code class="handlebars" data-trim>
+{{> loginButtons}}
+{{#if currentUser}} Vous êtes connecté {{/if}}
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Deploiement sur un environnement de demo</h3>
+            <pre><code class="sh" data-trim>meteor deploy my_awesome_project.meteor.com</code></pre>
+          </section>
+        </section>
+
+
       </div>
+    </div>
 
     <script src="build/js/lib/reveal/lib.min.js"></script>
     <script src="build/js/lib/d3/d3.min.js"></script>
