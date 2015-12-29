@@ -5,21 +5,25 @@ var gulp    = require('gulp'),
     express = require('express'),
     tinylr;
 
-var cssBuild = require('./task/cssBuild'),
-    jsBuild  = require('./task/jsBuild'),
-    build    = glou.parallel([cssBuild, jsBuild]);
+var cssBuild   = require('./task/cssBuild'),
+    jsBuild    = require('./task/jsBuild'),
+    jsSrcBuild = require('./task/jsSrcBuild'),
+    build      = glou.parallel([cssBuild, jsBuild, jsSrcBuild]);
 
-glou.task('less', cssBuild);
-glou.task('js',   jsBuild);
+glou.task('less',  cssBuild);
+glou.task('js',    jsBuild);
+glou.task('jsSrc', jsSrcBuild);
 glou.task('build', build);
 
 gulp.task('express',    expressTask);
 gulp.task('livereload', livereloadTask);
 
 gulp.task('watch', function() {
-  gulp.watch('**/*.html',    notifyLiveReload);
-  gulp.watch('**/*.css',     notifyLiveReload);
-  gulp.watch('style/*.less', ['less']);
+  gulp.watch('**/*.html',            notifyLiveReload);
+  gulp.watch('**/*.css',             notifyLiveReload);
+  gulp.watch('build/js/src/**/*.js', notifyLiveReload);
+  gulp.watch('src/**/*.js',          ['jsSrc']);
+  gulp.watch('style/*.less',         ['less']);
 });
 
 gulp.task('serve', ['build', 'express', 'livereload', 'watch'], function() {});
@@ -27,7 +31,7 @@ gulp.task('serve', ['build', 'express', 'livereload', 'watch'], function() {});
 
 function livereloadTask() {
   tinylr = require('tiny-lr')();
-    tinylr.listen(35729);
+  tinylr.listen(35729);
 }
 
 function expressTask() {

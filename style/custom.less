@@ -3,6 +3,7 @@
 
   section {
     img {
+
       &.no-style {
         border: none;
         box-shadow: none;
@@ -11,6 +12,36 @@
 
       &.angular-avatar {
         clip-path: polygon(51% 1%, 97% 16%, 90% 79%, 50% 100%, 12% 78%, 3% 16%);
+      }
+    }
+
+    ul.horizontal-serie {
+      li {
+        list-style: none;
+        width: 49%;
+
+        img {
+          margin: 0;
+          opacity: 0.6;
+          background-color: #000;
+          width: 100%;
+        }
+
+        &.overtitle {
+          position: relative;
+          display: inline-block;
+
+          &::before {
+            content: attr(title);
+            font-weight: bold;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+        }
       }
     }
   }
