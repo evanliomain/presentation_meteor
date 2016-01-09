@@ -49,7 +49,10 @@
 
         <section>
           <h2>A propos de moi</h2>
-          <img src="img/evan-gravatar.jpg" alt="Evan Liomain" class="angular-avatar no-style">
+          <!-- <span class="angular-avatar no-style meteor blend me"></span> -->
+          <p class="meteor" style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%">
+            <img src="img/evan-gravatar.jpg" alt="Evan Liomain" class="angular-avatar no-style blend">
+          </p>
           <p>Evan Liomain</p>
           <p>
             Developpeur front @sfeir
@@ -162,20 +165,10 @@
             <p>v1.3 actuellement en beta</p>
           </section>
           <section>
-            <h2>Fonctionnalités de la plateform JS</h2>
+            <h3>Fonctionnalités du client en ligne de commande</h3>
             <ul>
               <li class="fragment">
-                Base de donnée MongoDB
-                <img src="img/logo/mongodb.png" alt="MongoDB" class="no-style logo">
-              </li>
-              <li class="fragment">
-                Gestionnaire de websocket
-              </li>
-              <li class="fragment">
-                Moteur de templating (blaze)
-              </li>
-              <li class="fragment">
-                Package manager
+                Package manager : <a href="https://atmospherejs.com/">atmosphere</a> ou <a href="http://fastosphere.meteor.com/">fastosphere</a>
               </li>
               <li class="fragment">
                 App builder
@@ -187,17 +180,54 @@
               <li class="fragment">
                 Solution de hosting de demo et de production : <a href="https://www.meteor.com/galaxy/">Galaxy</a>
               </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Soft et framework associé</h3>
+            <ul>
               <li class="fragment">
-                Support ES2015
+                Base de donnée MongoDB 3.0
+                <img src="img/logo/mongodb.png" alt="MongoDB" class="no-style logo"> et MiniMongo
+              </li>
+              <li class="fragment">
+                Gestionnaire de websocket
+              </li>
+              <li class="fragment">
+                Moteur de templating :
+                <ul>
+                  <li>Blaze, par défaut</li>
+                  <li>
+                    AngularJS <img src="img/logo/AngularJS-Shield-large.png" alt="AngularJS" class="no-style logo"> depuis <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.2</li>
+                  <li>ReactJS <img src="img/logo/react-logo-1000-transparent.png" alt="ReactJS" class="no-style logo"> depuis <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.2</li>
+                </ul>
               </li>
             </ul>
           </section>
           <section>
-            <h2>Sur quel environnement ?</h2>
+            <h3>ES2015 Support</h3>
             <ul>
-              <li>Mac OSX</li>
-              <li>Linux</li>
-              <li>Windows (depuis 2015)</li>
+              <li class="fragment">
+                <a href="http://info.meteor.com/blog/meteor-and-es2015-devshop-london-edition">Depuis <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.2</a>
+                <ul>
+                  <li>Babel + polyfills</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                <a href="https://github.com/meteor/meteor/blob/release-1.3/packages/modules/README.md">
+                  Bientôt avec <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.3
+                </a>
+                <ul>
+                  <li>Modules ES2015</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>OS supportés</h2>
+            <ul>
+              <li>Mac OSX <img src="img/logo/osx-logo.png" alt="OSX" class="no-style logo"></li>
+              <li>Linux <img src="img/logo/linux-logo.png" alt="Linux" class="no-style logo"></li>
+              <li>Windows <img src="img/logo/windows-logo.png" alt="Windows" class="no-style logo"> depuis <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.1</li>
             </ul>
           </section>
         </section>
@@ -406,42 +436,99 @@ ServiceConfiguration.configurations.upsert({
 
         <section>
           <section>
-            <h2>Retour d'expérience</h2>
+            <h2>Retour d'EXpérience</h2>
           </section>
 
           <section>
-            TODO
+            <h3>Le projet</h3>
+            <ul>
+              <li>Une liste de course partagée</li>
+              <li>Authentification oauth google</li>
+              <li>Disponible en web app et mobile</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>La stack</h3>
+            <ul>
+              <li>Meteor 1.2 <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"></li>
+              <li>Angular 1.4 <img src="img/logo/AngularJS-Shield-large.png" alt="AngularJS" class="no-style logo"></li>
+              <li>Angular Material</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Points forts</h3>
+            <ul>
+              <li class="meteor-list">Pas de gestion de build à s'occuper</li>
+              <li class="meteor-list">Base de donnée disponible sans effort</li>
+              <li class="meteor-list">Données temps réel disponible sans effort</li>
+              <li class="meteor-list">Déploiement sur l'environnement de demo</li>
+              <li class="meteor-list">Code serveur, client et mobile partagé</li>
+              <li class="meteor-list">Livereload client et serveur</li>
+              <li class="meteor-list">Package e2e</li>
+              <li class="angular-list">Composant material-design à disposition</li>
+              <li class="angular-list">Simplicité d'utilisation d'angular</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Points faibles</h3>
+            <ul>
+              <li class="meteor-list">
+                Build et livereload + lent que si fait avec gulp
+              </li>
+              <li>
+                Tout développement s'accompagne des contraintes mobile :
+                <ul>
+                  <li>Taille de l'écran</li>
+                  <li>Réseau lent</li>
+                  <li>Gestion du touch</li>
+                </ul>
+              </li>
+            </ul>
           </section>
         </section>
 
-
         <section>
-          <h2>Quelques liens utiles</h2>
-          <ul>
-            <li>
-              Liens officiels :
-              <a href="https://www.meteor.com/">site</a>, <a href="http://info.meteor.com/blog">blog</a>, <a href="https://www.youtube.com/channel/UC3fBiJrFFMhKlsWM46AsAYw">chaine youtube</a>
-            </li>
-            <li>En français :
-              <ul>
-                <li><a href="https://www.youtube.com/watch?v=Kirit9Xl6ZM">Live coding de Vianney Lecroart au humantalks paris</a></li>
-                <li><a href="https://ploki.io/blog/meteor">Blog en français sur meteor par Vianney Lecroart</a></li>
-              </ul>
-            </li>
-            <li>Site de <a href="https://react-in-meteor.readthedocs.org/en/latest/">react-in-meteor</a></li>
-            <li>Avec angular :
-              <ul>
-                <li>Site d'<a href="http://www.angular-meteor.com/">angular-meteor.com</a></li>
-                <li>Présentations d'angular-meteor par Uri Goldshtein :
-                  <ul>
-                    <li><a href="https://www.youtube.com/watch?v=_mu6BWsnaPM">à ng-vegas</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=uFmf-DeCdEE">à ng-conf</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=3FT0BqYASCo">à angular-connect</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <section>
+            <h2>Quelques liens utiles</h2>
+            <h3>Liens officiels</h3>
+            <ul>
+              <li>Le site <a href="https://www.meteor.com/">meteor.com</a></li>
+              <li>Le <a href="http://info.meteor.com/blog">blog</a></li>
+              <li>La <a href="https://www.youtube.com/channel/UC3fBiJrFFMhKlsWM46AsAYw">chaine youtube</a></li>
+              <li>Le <a href="http://guide.meteor.com/">guide</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Quelques liens utiles</h2>
+            <h3>En français</h3>
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=Kirit9Xl6ZM">Live coding de Vianney Lecroart au humantalks paris</a></li>
+              <li><a href="https://ploki.io/blog/meteor">Blog en français sur meteor par Vianney Lecroart</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Quelques liens utiles</h2>
+            <h3>Avec ReactJS</h3>
+            <ul>
+              <li>Site de <a href="https://react-in-meteor.readthedocs.org/en/latest/">react-in-meteor</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Quelques liens utiles</h2>
+            <h3>Avec AngularJS</h3>
+            <ul>
+              <li>Site d'<a href="http://www.angular-meteor.com/">angular-meteor.com</a></li>
+              <li>Présentations d'angular-meteor par Uri Goldshtein à :
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=_mu6BWsnaPM">ng-vegas</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=uFmf-DeCdEE">ng-conf</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=3FT0BqYASCo">angular-connect</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
         </section>
 
         <section>
