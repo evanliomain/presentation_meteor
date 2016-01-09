@@ -50,6 +50,7 @@
         <section>
           <h2>A propos de moi</h2>
           <img src="img/evan-gravatar.jpg" alt="Evan Liomain" class="angular-avatar no-style">
+          <p>Evan Liomain</p>
           <p>
             Developpeur front @sfeir
           </p>
@@ -61,16 +62,16 @@
           </section>
           <section>
             <ul class="horizontal-serie">
-              <li class="overtitle" title="mainframe">
+              <li class="overtitle-top" title="mainframe">
                 <img src="img/context/mainframe.png" alt="mainframe">
               </li>
-              <li class="fragment overtitle" title="PC">
+              <li class="fragment overtitle-top" title="PC">
                 <img src="img/context/old_pc.gif" alt="pc">
               </li>
-              <li class="fragment overtitle" title="Web site">
+              <li class="fragment overtitle-top" title="Web site">
                 <img src="img/context/page_internet.gif" alt="web">
               </li>
-              <li class="fragment overtitle" title="Client connecté">
+              <li class="fragment overtitle-top" title="Client connecté">
                 <img src="img/context/smartphone_bb8.gif" alt="Client connecté">
               </li>
             </ul>
@@ -85,10 +86,34 @@
             </ul>
           </section>
           <section>
-            <h2>Plateforme du marché</h2>
-
+            <h2>Plateformes historiques du marché</h2>
+            <div class="square">
+              <div class="square-line">
+                <img src="img/logo/dotnet-white.png" alt=".net" class="no-style">
+                <img src="img/logo/rails.png" alt="rails" class="no-style">
+              </div>
+              <div class="square-line">
+                <img src="img/logo/php.png" alt="php" class="no-style">
+                <img src="img/logo/jee.png" alt="java jee" class="no-style">
+              </div>
+            </div>
           </section>
           <section>
+            <h2>Inconvénients</h2>
+            <ul>
+              <li>Langage client/serveur différent (hors java avec GWT)</li>
+              <li>Pas de partage de code entre client et serveur
+                <ul>
+                  <li>donc pas d'isomorphisme</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Solution</h2>
+            <p>La plateforme JS</p>
+          </section>
+          <section class="big-picture-section">
             <h2>JS Big Picture</h2>
             <div class="big-picture"></div>
           </section>
@@ -99,12 +124,27 @@
             <h2><img src="img/meteor-logo-white.png" alt="meteor" class="no-style"></h2>
             <p>Un autre framework de plus ?</p>
           </section>
-          <section>
+          <section data-background="img/people/people-header-image.jpg">
             <h2>Qui est derrière le rideau ?</h2>
-            <ul>
-              <li>
-                Projet initial par <a href="https://twitter.com/n1mmy">Nick Martin</a>, <a href="https://twitter.com/debergalis">Matt DeBergalis</a> et <a href="https://twitter.com/immir">Geoff Schmidt</a>
+            <ul class="horizontal-serie">
+              <li class="overtitle-bottom" title="Geoff Schmidt">
+                <a href="https://twitter.com/immir">
+                  <img src="img/people/geoff.png" alt="Geoff Schmidt" class="no-style hexagon">
+                </a>
               </li>
+              <li class="overtitle-bottom" title="Matt DeBergalis">
+                <a href="https://twitter.com/debergalis">
+                  <img src="img/people/matt.png" alt="Matt DeBergalis" class="no-style hexagon">
+                </a>
+              </li>
+              <li class="overtitle-bottom" title="Nick Martin">
+                <a href="https://twitter.com/n1mmy">
+                  <img src="img/people/nick.png" alt="Nick Martin" class="no-style hexagon">
+                </a>
+              </li>
+            </ul>
+
+            <ul>
               <li><a href="https://www.linkedin.com/company/meteor-development-group">MDG</a> : Meteor Development Group (fondé en 2011)</li>
               <li>La communauté</li>
             </ul>
@@ -122,7 +162,7 @@
             <p>v1.3 actuellement en beta</p>
           </section>
           <section>
-            <h2>Plateform JS</h2>
+            <h2>Fonctionnalités de la plateform JS</h2>
             <ul>
               <li class="fragment">
                 Base de donnée MongoDB
@@ -145,10 +185,10 @@
                 <img src="img/logo/cordova.png" alt="cordova" class="no-style logo">
               </li>
               <li class="fragment">
-                Solution de hosting de demo
+                Solution de hosting de demo et de production : <a href="https://www.meteor.com/galaxy/">Galaxy</a>
               </li>
               <li class="fragment">
-                Solution de hosting de production : Galaxy
+                Support ES2015
               </li>
             </ul>
           </section>
@@ -163,9 +203,6 @@
         </section>
 
         <section>
-          <section>
-            <h2>Morceau de code</h2>
-          </section>
           <section>
             <h2>Par où commencer ?</h2>
           </section>
@@ -184,12 +221,122 @@
 
           <section>
             <h3>Création du projet</h3>
-            <pre><code class="sh" data-trim>meteor create my-project</code></pre>
+            <pre><code class="sh" data-trim>
+meteor create my-project
+cd my-project
+            </code></pre>
             <ul class="fragment">
               <li>Fichier de demo : my-project.js, my-project.html, my-project.css</li>
               <li>Répertoire : .meteor</li>
               <li>Configure correctement les .gitignore</li>
             </ul>
+          </section>
+
+          <section>
+            <h3>Lancement du projet en local</h3>
+            <pre><code class="sh" data-trim>meteor</code></pre>
+          </section>
+
+          <section>
+            <h3>Déploiement sur un environnement de demo ou sur galaxy</h3>
+            <pre><code class="sh" data-trim>meteor deploy my_awesome_project.meteor.com</code></pre>
+          </section>
+
+          <section>
+            <h3>Déploiement sur un autre serveur ?</h3>
+            <p>Plus compliqué, mais peu être fait via des package npm tierce comme :</p>
+            <ul>
+              <li><a href="https://www.npmjs.com/package/mup">Meteor UP</a></li>
+              <li><a href="https://www.npmjs.com/package/meteor-shower">meteor-shower</a></li>
+            </ul>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Comment ça marche ?</h2>
+          </section>
+
+          <section>
+            <h3>3 types de code</h3>
+              <p>Dans le même fichier</p>
+              <pre><code class="js" data-trim>
+if (Meteor.isServer) {
+  // Exécuté sur le serveur
+}
+
+if (Meteor.isClient) {
+  // Exécuté dans le navigateur web
+}
+
+// Exécuté sur le serveur et le client
+            </code></pre>
+          </section>
+          <section>
+            <h3>3 types de code</h3>
+            <p>Dans des fichiers différents</p>
+            <ul>
+              <li>
+                user
+                <ul>
+                  <li>
+                    client
+                    <ul>
+                      <li>user.ui.js</li>
+                    </ul>
+                  </li>
+                  <li>
+                    server
+                    <ul>
+                      <li>user.publish.js</li>
+                    </ul>
+                  </li>
+                  <li>user.model.js</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Quels fichiers sont-ils buildés ?</h3>
+            <ul>
+              <li>code serveur : tous fichiers hors client, tests, public, et private</li>
+              <li>code client : tous fichiers hors server, tests, public, et private</li>
+              <li>asset serveur : tous fichiers contenu dans private</li>
+              <li>
+                asset client : tous fichiers contenu dans public, servis tels quels
+                <ul>
+                  <li>
+                    exemple : pour public/bg.png
+                    <pre><code class="html" data-trim>
+<img src='/bg.png' />
+                    </code></pre>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Dans quel ordre sont-ils buildés ?</h3>
+            <ul>
+              <li>Template HTML en premier</li>
+              <li>
+                Pour un répertoire donnée, les fichiers :
+                <ol>
+                  <li>du sous-répertoire lib/ sont chargés en premier</li>
+                  <li>sont chargés par ordre alphabêtique</li>
+                  <li>des sous-répertoires (hors lib/)</li>
+                  <li>main.* sont chargés en dernier</li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Un peu de code</h2>
           </section>
 
           <section>
@@ -224,7 +371,7 @@ MyList.update(this._id, {
 
           <section>
             <h3>Utilisation d'un package</h3>
-            <p>authentification OAUTH de google</p>
+            <p>Authentification OAUTH de google</p>
           </section>
           <section>
             <p>Ajout des packages</p>
@@ -235,7 +382,7 @@ MyList.update(this._id, {
 
           </section>
           <section>
-            <p>Configuration</p>
+            <p>Configuration (server)</p>
             <pre><code class="js" data-trim>
 ServiceConfiguration.configurations.upsert({
   service : 'google'
@@ -255,14 +402,51 @@ ServiceConfiguration.configurations.upsert({
 {{#if currentUser}} Vous êtes connecté {{/if}}
             </code></pre>
           </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Retour d'expérience</h2>
+          </section>
 
           <section>
-            <h3>Deploiement sur un environnement de demo</h3>
-            <pre><code class="sh" data-trim>meteor deploy my_awesome_project.meteor.com</code></pre>
+            TODO
           </section>
         </section>
 
 
+        <section>
+          <h2>Quelques liens utiles</h2>
+          <ul>
+            <li>
+              Liens officiels :
+              <a href="https://www.meteor.com/">site</a>, <a href="http://info.meteor.com/blog">blog</a>, <a href="https://www.youtube.com/channel/UC3fBiJrFFMhKlsWM46AsAYw">chaine youtube</a>
+            </li>
+            <li>En français :
+              <ul>
+                <li><a href="https://www.youtube.com/watch?v=Kirit9Xl6ZM">Live coding de Vianney Lecroart au humantalks paris</a></li>
+                <li><a href="https://ploki.io/blog/meteor">Blog en français sur meteor par Vianney Lecroart</a></li>
+              </ul>
+            </li>
+            <li>Site de <a href="https://react-in-meteor.readthedocs.org/en/latest/">react-in-meteor</a></li>
+            <li>Avec angular :
+              <ul>
+                <li>Site d'<a href="http://www.angular-meteor.com/">angular-meteor.com</a></li>
+                <li>Présentations d'angular-meteor par Uri Goldshtein :
+                  <ul>
+                    <li><a href="https://www.youtube.com/watch?v=_mu6BWsnaPM">à ng-vegas</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=uFmf-DeCdEE">à ng-conf</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=3FT0BqYASCo">à angular-connect</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Des questions ?</h2>
+        </section>
       </div>
     </div>
 
@@ -271,7 +455,6 @@ ServiceConfiguration.configurations.upsert({
 
     <script src="build/js/src/src.min.js"></script>
     <script>
-
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
@@ -281,6 +464,22 @@ ServiceConfiguration.configurations.upsert({
         center   : true,
 
         transition : 'slide', // none/fade/slide/convex/concave/zoom
+
+        // width: 50,
+        // height: 50,
+
+
+        // Parallax background image
+       parallaxBackgroundImage: 'img/673032main_PIA15255_2500x1250.jpg',
+        // Parallax background size
+       parallaxBackgroundSize: '2000px 1000px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+        // Number of pixels to move the parallax background per slide
+        // - Calculated automatically unless specified
+        // - Set to 0 to disable movement along an axis
+        parallaxBackgroundHorizontal: 10,
+        parallaxBackgroundVertical: 5,
+
 
         // Optional reveal.js plugins
         dependencies : [

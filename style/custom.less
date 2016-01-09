@@ -14,6 +14,18 @@
         clip-path: polygon(51% 1%, 97% 16%, 90% 79%, 50% 100%, 12% 78%, 3% 16%);
       }
 
+      &.heptagon {
+        clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      }
+
+      &.hexagon {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      }
+
+      &.pentagon {
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      }
+
       &.logo {
         width: 50px;
         height: 50px;
@@ -21,33 +33,84 @@
     }
 
     ul.horizontal-serie {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
       li {
         list-style: none;
-        width: 49%;
 
-        img {
-          margin: 0;
-          opacity: 0.6;
-          background-color: #000;
-          width: 100%;
-        }
+        &.overtitle-top, &.overtitle-bottom {
+          img {
+            margin: 0;
+            opacity: 0.6;
+            background-color: #000;
+          }
 
-        &.overtitle {
           position: relative;
           display: inline-block;
 
-          &::before {
-            content: attr(title);
+          &::before, &::after {
+            content: attr(' ');
             font-weight: bold;
             text-align: center;
             position: absolute;
-            top: 0;
             right: 0;
-            bottom: 0;
             left: 0;
+          }
+
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
+        }
+        &.overtitle-top {
+          &::before {
+            content: attr(title);
+          }
+        }
+        &.overtitle-bottom {
+          &::after {
+            content: attr(title);
           }
         }
       }
     }
+
+    div.square {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+
+
+      div.square-line {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+        img {
+          // max-width: 50%;
+          max-height: 100px;
+        }
+      }
+    }
+
+    .big-picture-section {
+      * {
+      }
+      div.big-picture {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: initial;
   }
 }

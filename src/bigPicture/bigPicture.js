@@ -56,7 +56,7 @@
     { label : 'qunit',        img : 'img/logo/icn-qunit-logo.png' },
     { label : 'protractor',   img : 'img/logo/protractor-logo.png' },
 
-    { label : 'socketio',     img : 'img/logo/socketio.gif' },
+    { label : 'socketio',     img : 'img/logo/socketio.png' },
     { label : 'strong loop',  img : 'img/logo/SL_Logo_Stacked_RGB.png' },
 
     { label : 'backbone',     img : 'img/logo/formation-backbone-js.png' },
@@ -142,7 +142,7 @@
 
   // canva creation
   var w = 1000,
-      h = 700,
+      h = 800,
       imgHeight = 40;
 
   var labelDistance = 0;
