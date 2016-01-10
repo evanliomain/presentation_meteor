@@ -1,8 +1,7 @@
-@img-size : 200px;
-
 .reveal {
 
   section {
+
     img {
       &.no-style {
         margin: 0;
@@ -11,18 +10,8 @@
         background: transparent;
       }
 
-      &.blend {
-        mix-blend-mode: luminosity; //luminosity;
-        width: @img-size;
-        height: @img-size;
-      }
-
       &.angular-avatar {
         clip-path: polygon(51% 1%, 97% 16%, 90% 79%, 50% 100%, 12% 78%, 3% 16%);
-      }
-
-      &.me {
-        background-image: url('../img/evan-gravatar.jpg');
       }
 
       &.heptagon {
@@ -41,15 +30,6 @@
         width: 50px;
         height: 50px;
       }
-    }
-
-    .meteor {
-      // background: tomato;
-      background-image: url('../img/meteor-logo.png');
-      background-repeat: no-repeat;
-      background-position: 48% 70%;
-      width: @img-size;
-      height: @img-size;
     }
 
     ul.horizontal-serie {
@@ -131,10 +111,10 @@
 
     li {
       &.angular-list {
-        list-style-image: url('../img/angular-logo-puce.png');
+        list-style-image: url('/img/angular-logo-puce.png');
       }
       &.meteor-list {
-        list-style-image: url('../img/meteor-logo-w-puce.png');
+        list-style-image: url('/img/meteor-logo-w-puce.png');
       }
     }
   }
