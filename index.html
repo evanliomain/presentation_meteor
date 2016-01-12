@@ -200,6 +200,22 @@
                   <li>ReactJS <img src="img/logo/react-logo-1000-transparent.png" alt="ReactJS" class="no-style logo"> depuis <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.2</li>
                 </ul>
               </li>
+              <li class="fragment">
+                Support de npm <img src="img/logo/npm-logo.svg" alt="npm" class="no-style logo">
+                <ul>
+                  <li>
+                    Pour <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> < 1.3
+                    <ul>
+                      <li>via un hack avec le package meteorhacks:npm</li>
+                      <li>via un package wrapper pour Meteor</li>
+                    </ul>
+                  </li>
+                  <li>
+                    A partir de <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.3 :
+                    <a href="http://slides.com/simonarvaux/meteor-beta#/3/4">disponible en import direct</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </section>
           <section>
@@ -353,6 +369,7 @@ if (Meteor.isClient) {
           </section>
           <section>
             <h3>Dans quel ordre sont-ils buildés ?</h3>
+            <p>Pour <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> < 1.3</p>
             <ul>
               <li>Template HTML en premier</li>
               <li>
@@ -455,42 +472,48 @@ ServiceConfiguration.configurations.upsert({
           <section>
             <h3>La stack</h3>
             <ul>
-              <li class="meteor-list">Meteor 1.2</li>
-              <li class="angular-list">Angular 1.4</li>
-              <li class="angular-list">Angular Material</li>
+              <li class="no-puce"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Meteor 1.2</li>
+              <li class="no-puce"><img src="img/logo/AngularJS-Shield-large.png" alt="AngularJS" class="no-style logo"> Angular 1.4</li>
+              <li class="no-puce"><img src="img/logo/AngularJS-Shield-large.png" alt="AngularJS" class="no-style logo"> Angular Material</li>
             </ul>
           </section>
 
           <section>
             <h3>Points forts</h3>
             <ul>
-              <li class="meteor-list">Pas de gestion de build à s'occuper</li>
-              <li class="meteor-list fragment">Base de donnée disponible sans effort</li>
-              <li class="meteor-list fragment">Données temps réel disponible sans effort</li>
-              <li class="meteor-list fragment">Déploiement sur l'environnement de demo</li>
-              <li class="meteor-list fragment">Code serveur, client et mobile partagé</li>
-              <li class="meteor-list fragment">Livereload client et serveur</li>
-              <li class="meteor-list fragment">Package e2e</li>
-              <li class="angular-list fragment">Composant material-design à disposition</li>
-              <li class="angular-list fragment">Simplicité d'utilisation d'angular</li>
+              <li class="no-puce"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Pas de gestion de build à s'occuper</li>
+              <li class="no-puce fragment"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Base de donnée disponible sans effort</li>
+              <li class="no-puce fragment"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Données temps réel disponible sans effort</li>
+              <li class="no-puce fragment"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Déploiement sur l'environnement de demo</li>
+              <li class="no-puce fragment"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Code serveur, client et mobile partagé</li>
+              <li class="no-puce fragment"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Livereload client et serveur</li>
+              <li class="no-puce fragment"><img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> Package e2e</li>
+              <li class="no-puce fragment"><img src="img/logo/AngularJS-Shield-large.png" alt="AngularJS" class="no-style logo"> Composant material-design à disposition</li>
+              <li class="no-puce fragment"><img src="img/logo/AngularJS-Shield-large.png" alt="AngularJS" class="no-style logo"> Simplicité d'utilisation d'angular</li>
             </ul>
           </section>
           <section>
             <h3>Points faibles</h3>
             <ul>
-              <li class="meteor-list">
+              <li class="no-puce">
+                <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo">
                 Build et livereload + lent que si fait avec gulp
               </li>
-              <li class="meteor-list fragment">
+              <li class="no-puce fragment">
+                <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo">
                 Indisponibilité de la plateforme de demo pendant que le serveur charge l'app
               </li>
-              <li class="fragment">
+              <li class="no-puce fragment">
                 Tout développement s'accompagne des contraintes mobile :
                 <ul>
                   <li>Taille de l'écran</li>
                   <li>Réseau lent</li>
                   <li>Gestion du touch</li>
                 </ul>
+              </li>
+              <li class="no-puce fragment">
+                <img src="img/logo/AngularJS-Shield-large.png" alt="AngularJS" class="no-style logo">
+                Changement d'API d'angular-meteor entre 1.2 et 1.3
               </li>
             </ul>
           </section>
@@ -533,6 +556,11 @@ ServiceConfiguration.configurations.upsert({
                   <li><a href="https://www.youtube.com/watch?v=uFmf-DeCdEE">ng-conf</a></li>
                   <li><a href="https://www.youtube.com/watch?v=3FT0BqYASCo">angular-connect</a></li>
                 </ul>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=spFmG9sm9Xg">
+                  Présentation de l'intégration de meteor et angular-meteor via bower dans un projet ionic par Uri Goldshtein
+                </a>
               </li>
             </ul>
           </section>
