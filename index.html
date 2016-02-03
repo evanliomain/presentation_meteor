@@ -106,7 +106,7 @@
               <li>Langage client/serveur différent (hors java avec GWT)</li>
               <li>Pas de partage de code entre client et serveur
                 <ul>
-                  <li>donc pas d'isomorphisme</li>
+                  <li>donc pas d'isomorphisme possible</li>
                 </ul>
               </li>
             </ul>
@@ -123,7 +123,7 @@
 
         <section>
           <section>
-            <h2>Historique de la plateforme</h2>
+            <h2>Historique de la plateforme MeteorJS</h2>
           </section>
           <section data-background="img/people/people-header-image.jpg">
             <h2>Qui est derrière le rideau ?</h2>
@@ -170,6 +170,16 @@
             <h2>Les fonctionnalités de la plateforme</h2>
           </section>
           <section>
+            <h2>Ce que je peux faire avec</h2>
+            web <i class="fa fa-laptop fa-3x"></i>
+            <br>
+            mobile <i class="fa fa-mobile fa-1x"></i> <i class="fa fa-tablet fa-2x"></i>
+            <br>
+            appli desktop <i class="fa fa-desktop fa-3x"></i>
+            <br>
+            code server <i class="fa fa-server fa-3x"></i>
+          </section>
+          <section>
             <h3>Fonctionnalités du client en ligne de commande</h3>
             <ul>
               <li class="fragment">
@@ -181,6 +191,12 @@
               <li class="fragment">
                 Conteneur mobile cordova
                 <img src="img/logo/cordova.png" alt="cordova" class="no-style logo">
+              </li>
+              <li class="fragment">
+                Conteneur appli desktop
+                <ul>
+                  <li>Via Electron <img src="img/logo/electron.png" alt="meteor" class="no-style logo"> par le package meson:electron</li>
+                </ul>
               </li>
               <li class="fragment">
                 Solution de hosting de demo et de production : <a href="https://www.meteor.com/galaxy/">Galaxy</a>
@@ -246,9 +262,9 @@
           <section>
             <h2>OS supportés</h2>
             <ul>
-              <li>Mac OSX <img src="img/logo/osx-logo.png" alt="OSX" class="no-style logo"></li>
-              <li>Linux <img src="img/logo/linux-logo.png" alt="Linux" class="no-style logo"></li>
-              <li>Windows <img src="img/logo/windows-logo.png" alt="Windows" class="no-style logo"> depuis <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.1</li>
+              <li>Mac OSX <i class="fa fa-apple"></i></li>
+              <li>Linux <i class="fa fa-linux"></i></li>
+              <li>Windows  <i class="fa fa-windows"></i> depuis <img src="img/meteor-logo-w.png" alt="meteor" class="no-style logo"> 1.1</li>
             </ul>
           </section>
         </section>
@@ -456,6 +472,7 @@ ServiceConfiguration.configurations.upsert({
             <p>Affichage</p>
             <pre><code class="handlebars" data-trim>
 {{> loginButtons}}
+{{#if loggingIn}} Vous êtes en cours de connexion {{/if}}
 {{#if currentUser}} Vous êtes connecté {{/if}}
             </code></pre>
           </section>

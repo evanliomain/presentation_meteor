@@ -23,7 +23,8 @@ var concatCssLib = glou
   .src([
     'node_modules/reveal.js/css/reveal.css',
     'node_modules/reveal.js/css/theme/black.css',
-    'node_modules/reveal.js/lib/css/zenburn.css'
+    'node_modules/reveal.js/lib/css/zenburn.css',
+    'node_modules/font-awesome/css/font-awesome.css'
   ])
   .pipe(sourcemaps.init)
   .pipe(minifyCss, {

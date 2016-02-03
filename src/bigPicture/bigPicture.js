@@ -61,7 +61,9 @@
 
     { label : 'backbone',     img : 'img/logo/formation-backbone-js.png' },
 
-    { label : 'supersonic',   img : 'img/logo/supersonic.png' }
+    { label : 'supersonic',   img : 'img/logo/supersonic.png' },
+
+    { label : 'electron',     img : 'img/logo/electron.png' },
   ];
 
   var weightLink0 = 0.8;
@@ -129,6 +131,7 @@
     { source : 29, target : 31,  weight: weightLink2 },
     { source : 29, target : 32,  weight: weightLink2 },
     { source : 29, target : 42,  weight: weightLink2 },
+    { source : 29, target : 43,  weight: weightLink2 },
 
     // test
     { source : 33, target : 34,  weight: weightLink2 },

@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test"  : "echo \"Error: no test specified\" && exit 1",
-    "start" : "gulp serve"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve"
   },
   "keywords": [
     "meteor"
   ],
   "author": "Evan Liomain",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "font-awesome": "^4.5.0"
+  }
 }
